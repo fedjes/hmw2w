@@ -1,31 +1,61 @@
 .message {
-
+   margin-top: 27px;
 }
 
 .imageAndText {
-
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .imageAndText img {
-
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    
 }
 
 .text {
-
+    border-radius: 5px;
+    width: 527px;
+    height: 60px;
+    flex-shrink: 0;
+    background-color: #0066CC;
 }
 
 .text:after {
-
+    
 }
 
 .name {
-
+    margin-right: 5px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: end;
 }
 
 .messageText {
-
+    margin-right: 5px;
+    text-align: end;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
 }
 
 .time {
-
+    display: flex;
+    justify-content: end;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-right: 10px;
 }
