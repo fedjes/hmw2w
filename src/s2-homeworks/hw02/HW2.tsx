@@ -43,7 +43,7 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Array<
 
     return affairs.filter(a => a.priority === filter)
 }
-export const deleteAffair = (affairs: AffairType[], _id: number): any => { // need to fix any
+export const deleteAffair = (affairs: AffairType[], _id: number): Array<AffairType> => { // need to fix any
 
 
     return affairs // need to fix
