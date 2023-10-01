@@ -1,35 +1,36 @@
-.greetingForm {
-}
+.greetingForm {}
 
-.inputAndButtonContainer {
-}
+.inputAndButtonContainer {}
 
-.error {
-}
+.error {}
 
 .input {
+    border-radius: 5px;
+    border: 1px solid #D1D1D1;
 }
 
-.input:focus {
-}
+.input:focus {}
 
 .errorInput {
+    border-radius: 5px;
+    border: 1px solid #C00;
 }
 
 .button {
+    border-radius: 3px;
+    background: var(--primary-100, #06C);
 }
 
-.button:focus {
-}
+.button:focus {}
 
-.button:active {
-}
+.button:active {}
 
 .button:disabled {
+    /* border-radius: 3px;
+    opacity: 0.5;
+    background: var(--primary-100, #06C); */
 }
 
-.text {
-}
+.text {}
 
-.greeting {
-}
+.greeting {}
