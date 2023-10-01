@@ -1,7 +1,8 @@
 import React from 'react'
 import {pureOnEnter} from '../GreetingContainer'
+import { KeyboardEvent } from 'react'
 
-let added: any
+let added: boolean
 const addUser = () => {
     added = true
 }
@@ -11,10 +12,10 @@ beforeEach(() => {
 })
 
 test('name 1', () => {
-    pureOnEnter({key: 'Enter'} as any, addUser)
+    pureOnEnter({key: 'Enter'} as KeyboardEvent, addUser)
     expect(added).toBe(true)
 })
 test('name 2', () => {
-    pureOnEnter({key: ''} as any, addUser)
+    pureOnEnter({key: ''} as KeyboardEvent, addUser)
     expect(added).toBe(false)
 })
