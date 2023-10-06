@@ -13,8 +13,14 @@
 
 .superInput {}
 
-.errorInput {}
+.errorInput {
+    border: 1px solid red;
+}
 
-.errorInput:focus {}
+.errorInput:focus {
+    border: 1px solid rgb(41, 122, 197);
+}
 
-.error {}
+.error {
+    color:  red;
+}
