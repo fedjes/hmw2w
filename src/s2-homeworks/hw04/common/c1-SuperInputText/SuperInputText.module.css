@@ -1,20 +1,20 @@
-.input:focus {
-}
+.input:focus {}
 
 .input {
+    display: flex;
+    width: 372px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.inputWrapper {
-}
+.inputWrapper {}
 
-.superInput {
-}
+.superInput {}
 
-.errorInput {
-}
+.errorInput {}
 
-.errorInput:focus {
-}
+.errorInput:focus {}
 
-.error {
-}
+.error {}
