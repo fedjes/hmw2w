@@ -1,15 +1,22 @@
 .radio {
+    display: flex;
+    flex-direction: column;
 }
 
 .radio::before {
+
 }
 
 
 .radio:checked::before {
+
 }
 
 .label {
+    display: flex;
 }
 
 .options {
+    
 }
+
