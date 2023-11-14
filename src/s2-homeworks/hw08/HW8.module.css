@@ -2,22 +2,35 @@
 }
 
 .item:last-of-type {
+
 }
 
 .users {
+    display: flex;
+    flex-direction: column;
+    width: 317px;
 }
 
+
 .buttonsContainer {
+
 }
 
 .container {
+    display: flex;
+    width: 400px;
+    flex-wrap: wrap;
+    gap: 30px
 }
 
 .thead {
+    background-color: grey;
 }
 
 .nameCol {
+    
 }
 
 .ageCol {
+   
 }

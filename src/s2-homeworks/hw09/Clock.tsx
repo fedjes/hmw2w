@@ -12,28 +12,57 @@ function Clock() {
     const start = () => {
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
-
-    }
+       
+        const time = (setInterval(() => {
+            setDate(new Date());
+        }, 1000));
+        setTimerId(+time)
+        setShow(true);
+    };
 
     const stop = () => {
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-
+        setShow(false)
+        clearInterval(timerId)
+        setTimerId(undefined)
     }
 
     const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
-
+        setShow(true)
     }
     const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
-
+        setShow(false)
     }
+    // const dayWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    // const monthsTest = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    // const hours = String(date.getHours()).padStart(2, '0');
+    // const minutes = String(date.getMinutes()).padStart(2, '0');
+    // const seconds = String(date.getSeconds()).padStart(2, '0');
+    // const stringTime = `${hours}:${minutes}:${seconds}` || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    
+    
+    //  const numberDay = String(date.getDate()).padStart(2, '0');
 
-    const stringTime = 'date->time' || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = 'date->date' || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    //  const year = String(date.getFullYear());
+  
+    // const stringDate = `${numberDay}.${date.getMonth()}.${year}` || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+  
+   
+    
+    // // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
+    // // let test = new Intl.DateTimeFormat(["long"])
+    // // console.log(test.format(date.getDay()));
+    //    //под вопросом реализации , не придумал как сделать с помощью статьи
+    // const stringDay = dayWeek[date.getDay()] || <br/> // пишут студенты
 
-    // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay = 'date->day' || <br/> // пишут студенты
-    const stringMonth = 'date->month' || <br/> // пишут студенты
-
+    
+    // const stringMonth = monthsTest[date.getMonth()] || <br/> // пишут студенты
+    // console.log(show);
+    
+    const stringTime = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }) || <br/>;
+    const stringDate = date.toLocaleDateString([], { day: '2-digit', month: '2-digit', year: 'numeric' }) || <br/>;
+    const stringDay = date.toLocaleDateString('en-US', { weekday: 'long' }) || <br/>;
+    const stringMonth = date.toLocaleDateString('en-US', { month: 'long' }) || <br/>;
     return (
         <div className={s.clock}>
             <div
@@ -66,14 +95,14 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={true} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={timerId !== undefined} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={true} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={!timerId} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
