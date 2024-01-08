@@ -42,7 +42,7 @@ function Clock() {
     
     
     //  const numberDay = String(date.getDate()).padStart(2, '0');
-
+    // const test = date.getDate()
     //  const year = String(date.getFullYear());
   
     // const stringDate = `${numberDay}.${date.getMonth()}.${year}` || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
@@ -60,7 +60,7 @@ function Clock() {
     // console.log(show);
     
     const stringTime = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }) || <br/>;
-    const stringDate = date.toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' }) || <br/>;
+    const stringDate = date.toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' }) || <br/>;
     const stringDay = date.toLocaleDateString('en-US', { weekday: 'long' }) || <br/>;
     const stringMonth = date.toLocaleDateString('en-US', { month: 'long' }) || <br/>;
     return (

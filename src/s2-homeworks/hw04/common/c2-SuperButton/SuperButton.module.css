@@ -5,7 +5,7 @@
     align-items: center;
     gap: 10px;
     border-radius: 3px;
-    
+    max-width: 200px;
 }
 
 .disabled {
